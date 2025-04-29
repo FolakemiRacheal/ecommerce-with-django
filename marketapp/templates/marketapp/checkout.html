@@ -1,11 +1,18 @@
 <!DOCTYPE html>
+{% extends 'checkout/base.html'%}
+
+
+
+{% load static%}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block content %}
     <title>Payment Pagement</title>
 </head>
 <body>
     <h3>payment with bank or transfer</h3>
+{% endblock content%}
 </body>
 </html>

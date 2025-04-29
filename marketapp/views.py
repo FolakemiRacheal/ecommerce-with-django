@@ -2,11 +2,14 @@ from django.shortcuts import render
 
 # Create your views here.
 def market(request):
-    return render(request, 'marketapp/market.html')
+    context={}
+    return render(request, 'marketapp/market.html', context)
 
 def cart(request):
-    return render(request, 'marketapp/cart.html')
+    context = {}
+    return render(request, 'marketapp/cart.html',context)
 
 def checkout(request):
-    return render(request, 'marketapp/checkout.html')
+    context = {}
+    return render(request, 'marketapp/checkout.html', context)
 
