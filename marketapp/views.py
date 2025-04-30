@@ -13,3 +13,7 @@ def checkout(request):
     context = {}
     return render(request, 'marketapp/checkout.html', context)
 
+def base(request):
+    context = {}
+    return render(request, 'marketapp/base.html', context)
+
