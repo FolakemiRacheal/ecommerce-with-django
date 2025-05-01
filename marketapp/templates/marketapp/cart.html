@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 {% extends 'marketapp/base.html'%}
-
 {% load static%}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,6 +11,29 @@
 </head>
 <body>
     <h5>Welcome to add to cart page</h5>
+    <div class="row">
+        <div class="row-container">
+            <a href="{% url 'market'%}"> Continue Shopping</a>
+            <br>
+            <table class="table">
+                <tr>
+                  <th><h3>Item: <strong>5</strong></h3></th>
+                  <th><h3>Item: <strong>5</strong></h3></th>
+                  <a href="#">checkout</a>
+                </tr>
+            </table>
+
+        </div>
+        <br>
+        <div class="row-container">
+            <div>Items</div>
+            <div>Price</div>
+            <div>Quantity</div>
+            <div>Total</div>
+
+        </div>
+
+    </div>
 {% endblock content%}
 </body>
 </html>
