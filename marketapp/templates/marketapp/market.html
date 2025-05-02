@@ -7,10 +7,10 @@
     {% for products in products %}
 <div class="row-container">
     <img class=""  src="{% static 'images/item' %}" >
-<h5><strong>Product</strong></h5>
+<h5><strong>{{product.name}}</strong></h5>
 <button>Add to cart</button>
 <a href="#">View</a>
-<h4>$50</h4>
+<h4>{{product.price|floatformat:2}}</h4>
 </div>
 {% endfor %}
 </div>
