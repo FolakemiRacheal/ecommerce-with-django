@@ -1,8 +1,9 @@
 from django.shortcuts import render
-
+from .models import *
 # Create your views here.
 def market(request):
-    context={}
+    products = Product.objects.all()
+    context={'products':products}
     return render(request, 'marketapp/market.html', context)
 
 def cart(request):
@@ -13,7 +14,4 @@ def checkout(request):
     context = {}
     return render(request, 'marketapp/checkout.html', context)
 
-def base(request):
-    context = {}
-    return render(request, 'marketapp/base.html', context)
 

@@ -13,6 +13,75 @@
 </head>
 <body>
     <h3>payment with bank or transfer</h3>
+
+    <div class="row-container">
+        <form action="form">
+            <div id="User-info">
+                <div class="form-field">
+                    <input type="text" name="Name" placeholder="Name">
+                </div>
+
+                <div class="form-field">
+                     <input type="email" name="email" placeholder="Email">
+                </div>
+
+            </div>
+            <div id="shipping-details">
+
+
+                <div class="form-field">
+                    <input type="text" name="name address" placeholder="Address">
+               </div>
+
+               <div class="form-field">
+                <input type="text" name="city" placeholder="City">
+           </div>
+
+           <div class="form-field">
+            <input type="text" name="state" placeholder="State">
+       </div>
+
+       <div class="form-field">
+        <input type="text" name="Zip Code" placeholder="Zip code">
+   </div>
+
+   <div class="form-field">
+    <input type="email" name="email" placeholder="Email">
+</div>
+
+<div class="form-field">
+    <input type="text" name="Country" placeholder="Country">
+</div>
+
+            </div>
+            <hr>
+            <input type="text" value="Continue">
+        </form>
+<div class="row-container">
+
+</div>
+<br>
+<div class="container">
+    <small>Paypal Options</small>
+
+</div>
+<div class="box container">
+<a href="#">Back to Cart</a>
+<hr>
+<h3>Order Summary</h3>
+<hr>
+
+<div class="cart-row">
+<div> <p>Product 1</p></div>
+<div> <p>$50</p></div>
+<div> <p>x2</p></div>
+</div>
+<h5>Item: 6</h5>
+<h5>Item: 7</h5>
+</div>
+    </div>
+   
+
 {% endblock content%}
 </body>
 </html>

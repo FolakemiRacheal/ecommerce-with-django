@@ -4,6 +4,7 @@
 {% block content%}    
 <h4>pick your choice or pick all</h4>
 <div class="row">
+    {% for products in products %}
 <div class="row-container">
     <img class=""  src="{% static 'images/item' %}" >
 <h5><strong>Product</strong></h5>
@@ -11,24 +12,6 @@
 <a href="#">View</a>
 <h4>$50</h4>
 </div>
+{% endfor %}
 </div>
-
-<div class="row">
-    <div class="row-container">
-        <img class="thumbnail"  src="{% static 'images/picture.jpg' %}" >
-    <h5><strong>Product</strong></h5>
-    <button>Add to cart</button>
-<a href="#">View</a>
-<h4>$50</h4>
-    </div>
-    </div>
-    <div class="row">
-        <div class="row-container">
-            <img class="thumbnail"  src="{% static 'images/item' %}" >
-        <h5><strong>Product</strong></h5>
-        <button>Add to cart</button>
-<a href="#">View</a>
-<h4>$50</h4>
-        </div>
-        </div>
 {% endblock content%}
