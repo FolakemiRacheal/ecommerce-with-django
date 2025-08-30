@@ -1,0 +1,11 @@
+let updateBtns =document.getElementsByClassName('upate-cart')
+
+for (const i=0; i < updateBtns.length; i++){
+    updateBtns[i].addEventListener('click', function(){
+    let productId = this.dataset.product
+    let action = this.dataset.action
+    console.log('productId:',productId,'Action:',action )
+
+    Con
+    })
+}

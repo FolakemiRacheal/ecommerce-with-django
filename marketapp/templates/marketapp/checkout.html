@@ -61,7 +61,7 @@
 
 </div>
 <br>
-<div class="container">
+<div class="box-container hidden" id="payment-info">
     <small>Paypal Options</small>
 
 </div>
@@ -70,14 +70,16 @@
 <hr>
 <h3>Order Summary</h3>
 <hr>
-
+{% for list in lists %}
 <div class="cart-row">
 <div> <p>Product 1</p></div>
 <div> <p>$50</p></div>
 <div> <p>x2</p></div>
 </div>
-<h5>Item: 6</h5>
-<h5>Item: 7</h5>
+{% endfor %}
+
+<h5>Item: {{order.get_cart_lists}}</h5>
+<h5>Total{{order.get_cart_total}}</h5>
 </div>
     </div>
    

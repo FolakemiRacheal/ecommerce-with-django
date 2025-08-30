@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% extends 'marketapp/base.html'%}
-{% load static%}
+{% load static %}
 
 <html lang="en">
 <head>
@@ -17,10 +17,13 @@
             <br>
             <table class="table">
                 <tr>
-                  <th><h3>Item: <strong>5</strong></h3></th>
-                  <th><h3>Item: <strong>5</strong></h3></th>
-                  <a href="#">checkout</a>
+                  <th><h3>Item: <strong>{{order.get_cart_lists}}</strong></h3></th>
+                  <th><h3>Item: <strong>{{order.get_cart_total}}</strong></h3></th>
+                 
                 </tr>
+                <th>
+                     <a href="{% url 'checkout' %}">checkout</a>
+                </th>
             </table>
 
         </div>
@@ -29,7 +32,26 @@
             <div>Items</div>
             <div>Price</div>
             <div>Quantity</div>
-            <div>Total</div>
+            <div><strong>Total</strong></div>
+
+        </div> 
+        
+        {% for list in lists %}
+
+            <div style="flex:1">
+                 <div style="flex: 1">{{list.product.name}}</div>
+                 <div style="flex: 1">{{list.product.price}}</div>
+                <p class="quantity">{{list.quantity}}</p>
+                <div class="quantity">
+                    <img src="{% static 'images/item' %}" alt="">
+
+                     <img src="{% static 'images/item' %}" alt="">
+                </div>
+
+                <div style="flex: 1">{{lists.get_total}}</div>
+
+            </div>
+            {% endfor %}
 
         </div>
 
